@@ -1,4 +1,5 @@
 /* CSS stillerinizi buraya girin */
+
 .header {
   background-color: #f2f2f2;
   margin: 0;
@@ -30,8 +31,16 @@ li a:hover {
 }
 .content {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30 auto;
+  justify-content: center;
 }
 .content-sag {
+  padding-right: 10px;
+  max-width: 900px;
+  min-width: 200px;
+
   text-align: center;
 }
 .button1 {
@@ -40,16 +49,17 @@ li a:hover {
 }
 .fotolar1 {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: space-evenly;
-  margin-top: 34px;
+  margin: 34px auto;
 }
 .fotolar2 {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: space-evenly;
-  margin-top: 34px;
-  margin-bottom: 34px;
+  margin: 34px auto;
 }
 footer {
   background-color: #f2f2f2;
@@ -78,11 +88,15 @@ footer {
 
 .hakkimdasayfasi {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
   margin-top: 50px;
+  gap: 10px;
 }
 .hakkimda-sag {
   text-align: center;
+  max-width: 900px;
+  min-width: 400px;
 }
 /*projeler */
 .projefoto {
@@ -101,4 +115,68 @@ footer {
 }
 .projefoto a:hover {
   color: blueviolet;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightseagreen;
+  }
+  .fotolar1 {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+  .fotolar2 {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+  .content {
+    justify-content: center;
+  }
+  .header ul {
+    justify-content: flex-start;
+  }
+  .hakkimdasayfasi {
+    justify-content: center;
+  }
+  .hakkimda-sag {
+    text-align: center;
+  }
+  .hakkimdasayfasi .foto8 {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  body {
+    background-color: lightcoral;
+  }
+  .fotolar1 {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+  .fotolar2 {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+  .content {
+    justify-content: center;
+  }
+  .hakkimdasayfasi {
+    justify-content: center;
+  }
+  .hakkimda-sag {
+    text-align: center;
+  }
+  .hakkimdasayfasi .foto8 {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: lightblue;
+  }
+  .header ul {
+    justify-content: flex-start;
+  }
 }
